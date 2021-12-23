@@ -2603,7 +2603,6 @@ const options = {
       _notiflix.default.Notify.failure("Please choose a date in the future");
     } else {
       startTime = selectedDates[0];
-      console.log(startTime);
       refs.startBtn.disabled = false;
 
       _notiflix.default.Notify.success('Date is correct');
@@ -2633,6 +2632,7 @@ class Timer {
       return;
     }
 
+    refs.startBtn.disabled = true;
     this.isActive = true;
     this.intervalId = setInterval(() => {
       const currentTime = Date.now();
@@ -2723,7 +2723,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61572" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60163" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
